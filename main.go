@@ -2,7 +2,7 @@
 // them. It reports the size of the resource at the URL and the time it took to
 // download it. It does this concurrently.
 //
-// Adapted from github.com/adonovan/gopl.io/tree/master/ch1/fetchall.
+// Adapted from https://github.com/adonovan/gopl.io/tree/master/ch1/fetchall.
 package main
 
 import (
