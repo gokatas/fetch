@@ -1,4 +1,4 @@
-// Fetchurl ranges over the CLI arguments (that should be URLs) and fetches each of
+// Fetch ranges over the CLI arguments (that should be URLs) and fetches each of
 // them. It reports the size of the resource at the URL and the time it took to
 // download it. It does so concurrently.
 //
