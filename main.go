@@ -15,12 +15,13 @@ import (
 
 func main() {
 	start := time.Now()
+	urls := os.Args[1:]
 
 	ch := make(chan string)
-	for _, arg := range os.Args[1:] {
-		go fetch(arg, ch)
+	for _, u := range urls {
+		go fetch(u, ch)
 	}
-	for range os.Args[1:] {
+	for range urls {
 		fmt.Println(<-ch)
 	}
 
@@ -44,5 +45,5 @@ func fetch(url string, ch chan<- string) {
 	}
 
 	// time size url
-	ch <- fmt.Sprintf("%.3fs %7d %s", time.Since(start).Seconds(), n, url)
+	ch <- fmt.Sprintf("%.3fs %6db %s", time.Since(start).Seconds(), n, url)
 }
